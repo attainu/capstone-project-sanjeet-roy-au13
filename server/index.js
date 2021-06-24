@@ -1,3 +1,4 @@
+
 import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
@@ -14,6 +15,11 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 app.use("/user", userRouter);
+
+app.use('/',(req,res)=>{
+  res.send('welcome to Souvenir application')
+
+});
 
 const CONNECTION_URL = process.env.CONNECTION_URL;
 const PORT = process.env.PORT|| 5000;
