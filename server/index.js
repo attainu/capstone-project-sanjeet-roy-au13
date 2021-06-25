@@ -17,9 +17,8 @@ app.use('/posts', postRoutes);
 app.use("/user", userRouter);
 
 app.use('/',(req,res)=>{
-  res.send('welcome to Souvenir application')
-
-});
+  res.send("welcome to souvenir Application")
+})
 
 const CONNECTION_URL = process.env.CONNECTION_URL;
 const PORT = process.env.PORT|| 5000;
